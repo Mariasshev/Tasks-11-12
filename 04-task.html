@@ -24,6 +24,38 @@
 </head>
 
 <body>
+
+    <table id="statsTable">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
     <script>
         /*
         Задание:
@@ -62,6 +94,15 @@
             }
         ];
 
+        let tableScore = document.getElementById("statsTable");
+        let rows = tableScore.querySelectorAll("tr");
+        let i = 0;
+        for(const row of rows)
+        {
+            row.children[0].textContent = source[i].month;
+            row.children[1].textContent = source[i].amount;
+            i++;
+        }
     </script>
 </body>
 

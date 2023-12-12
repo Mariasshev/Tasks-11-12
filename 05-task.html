@@ -492,14 +492,10 @@
             for (const friend of user.friends) {
                 ul.insertAdjacentHTML("beforeend", `<li>${friend.name}</li>`);
             }
-
-            //let friends = document.querySelectorAll(users.friends);
-            for(const friend of user.friends)
+            
+            if (user.friends.length < 5) 
             {
-                if(friend < 5)
-                {
-                    card.style.border = "2px solid red";
-                }
+                div.style.border = "2px solid red";
             }
 
             div.append(ul);
@@ -510,6 +506,7 @@
             let card = createUserCard(user);
             document.body.append(card);
         });
+
     </script>
 </body>
 
